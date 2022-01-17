@@ -1,0 +1,33 @@
+
+<p class="h4 mb-4 center">Products List</p>
+<table class="styled-table text-center center">
+    
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Remarks</th>
+             <th>Action</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= "let product of products; index as i">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.remarks}}</td>
+            <td>
+                <button routerLink = "/product/edit" [queryParams]="{id: product.id}" class="btn btn-outline-warning">Edit</button>
+                 <button (click)="deleteById(product.id)" class="btn btn-outline-danger">Delete</button>            </td>
+          
+        </tr>
+    </tbody>
+   
+</table>
+<div style="text-align:center">
+<a href="" routerLink="/product/create">Add Product</a>
+</div>

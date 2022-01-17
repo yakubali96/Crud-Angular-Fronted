@@ -1,0 +1,36 @@
+
+
+<form #form ="ngForm" (ngSubmit)="updateProduct(form)" class="text-center border border-light p-5">
+   
+<table class="styled-table center">
+    <p class="h4 mb-4">Edit product Table</p>
+    <tr>
+        <td>Product Name</td>
+        <td><input [(ngModel)]="product.name" type="text" name="name"></td>
+    </tr>
+    <tr>
+        <td>Product Quantity</td>
+        <td><input [(ngModel)]="product.quantity" type="number" name="quantity"></td>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td><input [(ngModel)]="product.price" type="number" name="price"></td>
+    </tr>
+    <tr>
+        <td>Quality</td>
+        <td>
+            <textarea name="remarks" [(ngModel)]="product.remarks"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button type="submit" class="btn btn-outline-success">Update</button>
+        </td>
+    </tr>
+    <div style="text-align:center">
+        <a href="" routerLink="/product">Add new Product</a>
+        </div>
+</table>
+</form>
+
